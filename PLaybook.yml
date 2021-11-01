@@ -1,0 +1,11 @@
+---
+- name: Install IIS
+  hosts: all
+  tasks:
+    - name: Install IIS
+      vin_feature:
+        name: "Web-Server"
+        state: present
+        restart: yes
+        include_sub_features: yes
+        include_management tools: yes
